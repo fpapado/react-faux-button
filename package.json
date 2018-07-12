@@ -6,7 +6,7 @@
   "module": "dist/react-faux-button.es.js",
   "main": "dist/react-faux-button.es.js",
   "umd:main": "dist/react-faux-button.umd.js",
-  "types": "dist/react-faux-button.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fpapado/react-faux-button.git"
