@@ -1,6 +1,6 @@
 {
   "name": "react-faux-button",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An accessible, configurable React Button usurper.",
   "source": "src/index.tsx",
   "module": "dist/react-faux-button.es.js",
@@ -15,7 +15,7 @@
     "react",
     "a11y",
     "accessibility",
-    "tooltip",
+    "button",
     "aria"
   ],
   "author": "Fotis Papadogeorgopoulos",
