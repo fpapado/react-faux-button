@@ -10,7 +10,8 @@
 * [Usage](#usage)
 
 ## NOTE
-Use sparingly. If you can use the default <button> – possible more often than not – just do so.
+Use sparingly. If you can use the default `<button>` – possible more often than not – just do so.
+Incidentally, this is the reason the package is called "faux" button :)
 
 ## Features
 
