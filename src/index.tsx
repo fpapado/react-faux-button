@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 /**
  * Accessible "button" usurper.
@@ -32,13 +32,13 @@ export const FauxButton: React.StatelessComponent<IFauxButton> = ({
     tag,
     {
       ...rest,
-      role: "button",
-      tabIndex: "0",
+      role: 'button',
+      tabIndex: '0',
       className,
       // Disabled if set, or if interaction non-existent
       disabled: disabled ? true : onInteraction ? null : true,
       onClick: onInteraction,
-      onKeyDown: onInteraction && handleKeyActivation(onInteraction)
+      onKeyDown: onInteraction && handleKeyActivation(onInteraction),
     },
     children
   );
@@ -47,8 +47,8 @@ export const FauxButton: React.StatelessComponent<IFauxButton> = ({
 function handleKeyActivation(cb: () => any) {
   return (event: any) => {
     switch (event.key) {
-      case "Enter":
-      case " ":
+      case 'Enter':
+      case ' ':
         event.preventDefault();
         cb();
         return;
