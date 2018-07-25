@@ -1,6 +1,6 @@
 {
   "name": "react-faux-button",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "An accessible, configurable React Button usurper.",
   "source": "src/index.tsx",
   "module": "dist/react-faux-button.mjs",
