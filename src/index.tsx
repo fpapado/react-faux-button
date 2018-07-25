@@ -1,5 +1,7 @@
 import React from 'react';
 
+const h = React.createElement;
+
 /**
  * Accessible "button" usurper.
  * Establishes the correct role, tabindex, and key/mouse interaction if interactive.
@@ -20,7 +22,7 @@ interface IFauxButton extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 
-export const FauxButton: React.StatelessComponent<IFauxButton> = ({
+export const FauxButton: React.SFC<IFauxButton> = ({
   tag,
   className,
   onInteraction,
@@ -28,7 +30,7 @@ export const FauxButton: React.StatelessComponent<IFauxButton> = ({
   children,
   ...rest
 }) =>
-  React.createElement(
+  h(
     tag,
     {
       ...rest,
@@ -43,7 +45,7 @@ export const FauxButton: React.StatelessComponent<IFauxButton> = ({
     children
   );
 
-// Handle the keyboard activation same as a button
+/** Handle the keyboard activation same as a button */
 function handleKeyActivation(cb: () => any) {
   return (event: any) => {
     switch (event.key) {

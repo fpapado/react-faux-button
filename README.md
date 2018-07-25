@@ -1,6 +1,10 @@
 # React Faux Button
 
-> Accessible React <button> usurper.
+> Accessible React `<button>` usurper.
+
+[![npm](https://img.shields.io/npm/v/react-faux-button.svg)](https://www.npmjs.com/package/react-faux-button)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/react-faux-button/dist/react-faux-button.js?compression=gzip)](https://unpkg.com/react-faux-button/dist/react-faux-button.js)
+[![npm downloads](https://img.shields.io/npm/dm/react-faux-button.svg)](https://www.npmjs.com/package/react-faux-button)
 
 ## Table of Contents
 
@@ -38,10 +42,10 @@ Then import according to your modules model and bundler, such as [Rollup](https:
 
 ```js
 // ES Modules
-import { Tooltip } from "react-faux-button";
+import { FauxButton } from "react-faux-button";
 
 /// CommonJS modules
-const { Tooltip } = require("react-faux-button");
+const { FauxButton } = require("react-faux-button");
 ```
 
 A [UMD](https://github.com/umdjs/umd) version is also available on [unpkg](https://unpkg.com/):
@@ -51,7 +55,13 @@ A [UMD](https://github.com/umdjs/umd) version is also available on [unpkg](https
 ```
 
 ## Motivation
-:construction: WIP :construction
+When having an interactable item in your application, a `button` is almost always the right answer.
+I have found that many developers are averse to using `button` due to its historical styling issues.
+
+While I find the button resets (and more importantly, styling) to be straightforward nowadays, I often have
+to work with codebases that use `div`s with an `onClick`. Those codebases might have non-straightforward
+resets, might rely on the element being a `div`, and so on. In those cases, I find it particularly useful
+to have an accessible `button` usurper. This is the one I use.
 
 ## Usage
 ### Quick Start
@@ -61,13 +71,12 @@ If you want to just dive in, do this:
 ```jsx
 import { FauxButton } from "react-faux-button";
 
-<FauxButton>
+<FauxButton tag="div" onInteraction={() => /* do something */}>
   Print files
 </FauxButton>
 ```
 
 ## References
-The aria authoring practices offer a concise overview of button behaviour:
-
+The ARIA authoring practices offer a concise overview of expected button behaviour:
 - https://www.w3.org/TR/wai-aria-practices-1.1/#button
 - https://www.w3.org/TR/wai-aria-practices-1.1/examples/button/button.html
